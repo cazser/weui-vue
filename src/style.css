@@ -10,3 +10,17 @@
   box-sizing: border-box;
  
 }
+
+
+.small-img{
+  max-width: 24px;
+}
+
+.white-background{
+  background: #fff;
+}
+
+
+ol, ul{
+  list-style: none;
+}
