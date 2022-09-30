@@ -5,14 +5,21 @@ defineProps({
   msg: String
 })
 
-const count = ref(0)
+const contentVisible = ref(false);
+const onclick= ()=>{
+  contentVisible.value = !contentVisible.value;
+}
 </script>
 
 <template>
- <div>
-  折叠面板
- </div>
+    <header @click="onclick">
+    <slot name="header"></slot>
+  </header>
+  <main v-if="contentVisible">
+    <slot></slot>
+  </main>
 </template>
+
 
 <style scoped>
 .read-the-docs {
