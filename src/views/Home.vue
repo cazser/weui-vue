@@ -56,31 +56,23 @@ import RightArrow from '../components/RightArrow.vue';
         </LineItem>
         </router-link>
       </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>List</span>
-          </template>
-          <template #default >
-            <RightArrow/>
-          </template>
-        </LineItem>
-      </li>   
+      
     </ol>
   </template>
    </FoldPanel>
  
    </li>
+    
      <li>
     <FoldPanel>
     <template #header>
     <LineItem>
       <template #header >
-        <span>表单</span>
+        <span>基础组件</span>
       </template>
       <template #default >
         <span>
-          <img src="../images/icon_nav_form.png" alt=" 展开"  class="small-img" />
+          <img src="../images/icon_nav_layout.png" alt=" 展开"  class="small-img" />
         </span>
       </template>
     </LineItem>
@@ -91,39 +83,29 @@ import RightArrow from '../components/RightArrow.vue';
       <li>
         <LineItem>
           <template #header >
-            <span>Button</span>
+            <span>Progress</span>
           </template>
         </LineItem>
       </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>   
+      
+      
+       
     </ol>
   </template>
    </FoldPanel>
  
    </li>
-     <li>
+    
+        <li>
     <FoldPanel>
     <template #header>
     <LineItem>
       <template #header >
-        <span>表单</span>
+        <span>操作反馈</span>
       </template>
       <template #default >
         <span>
-          <img src="../images/icon_nav_form.png" alt=" 展开"  class="small-img" />
+          <img src="../images/icon_nav_feedback.png" alt=" 展开"  class="small-img" />
         </span>
       </template>
     </LineItem>
@@ -134,153 +116,13 @@ import RightArrow from '../components/RightArrow.vue';
       <li>
         <LineItem>
           <template #header >
-            <span>Button</span>
+            <span>Progress</span>
           </template>
         </LineItem>
       </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>   
-    </ol>
-  </template>
-   </FoldPanel>
- 
-   </li>
-     <li>
-    <FoldPanel>
-    <template #header>
-    <LineItem>
-      <template #header >
-        <span>表单</span>
-      </template>
-      <template #default >
-        <span>
-          <img src="../images/icon_nav_form.png" alt=" 展开"  class="small-img" />
-        </span>
-      </template>
-    </LineItem>
-  </template>
-
-  <template #default>
-    <ol class="list">
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>   
-    </ol>
-  </template>
-   </FoldPanel>
- 
-   </li>
-     <li>
-    <FoldPanel>
-    <template #header>
-    <LineItem>
-      <template #header >
-        <span>表单</span>
-      </template>
-      <template #default >
-        <span>
-          <img src="../images/icon_nav_form.png" alt=" 展开"  class="small-img" />
-        </span>
-      </template>
-    </LineItem>
-  </template>
-
-  <template #default>
-    <ol class="list">
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>   
-    </ol>
-  </template>
-   </FoldPanel>
- 
-   </li>
-     <li>
-    <FoldPanel>
-    <template #header>
-    <LineItem>
-      <template #header >
-        <span>表单</span>
-      </template>
-      <template #default >
-        <span>
-          <img src="../images/icon_nav_form.png" alt=" 展开"  class="small-img" />
-        </span>
-      </template>
-    </LineItem>
-  </template>
-
-  <template #default>
-    <ol class="list">
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>
-      <li>
-        <LineItem>
-          <template #header >
-            <span>Button</span>
-          </template>
-        </LineItem>
-      </li>   
+      
+      
+       
     </ol>
   </template>
    </FoldPanel>
