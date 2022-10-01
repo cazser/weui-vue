@@ -1,11 +1,15 @@
 <template>
   <div>
-    <button><span></span></button>
+    <button @click="onclick" :class="{open: state}"><span :class="{open1: state}"></span></button>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
   
+const state =  ref(true);  
+const onclick=()=>{state.value=!state.value}
 </script>
 
 <style scoped>
@@ -20,7 +24,9 @@
     text-align: center;
     position: relative;
   }
-
+.open{
+  background-color: rgba(0,0,0,0.1);
+}
  span{
   border: none;
   width: 30px;
@@ -31,5 +37,9 @@
   bottom: 1px;
   background: white;
   right: 2px;
+}
+
+.open1{
+  right: 18px;
 }
 </style>
