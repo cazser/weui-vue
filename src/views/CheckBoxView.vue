@@ -1,9 +1,8 @@
 <template>
   <div class="checkbox-view-wrapper">
     <h2>复选框样式展示</h2>
-    {{checked}}
   <CheckBox v-model:checked="checked">
-    standard is dealt for u.
+    你好
     </CheckBox>
     <Button :prime="true" class="attachBottom">
       下一步

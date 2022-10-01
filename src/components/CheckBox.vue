@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="checkWrapper">
    
     <span @click="click" class="uncheck" :class="{checked: checked}" >
       
@@ -33,6 +33,11 @@ const click=()=>{
 </script>
 
 <style scoped>
+
+.checkWrapper{
+  padding: 12px;
+  line-height: 1.5em;
+}
 .uncheck{
   display: inline;
   width:1em;
@@ -41,11 +46,13 @@ const click=()=>{
   border: 1px solid;
   display: inline-flex;
   align-items: center;
+  overflow: hidden;
+  margin: 2px;
 }
 
 .icon{
-  transform: translateX(-1px);
-  max-width: 1em;
+  transform: translateX(-2px);
+  min-width: 1.2em;
 }
 
 
