@@ -85,6 +85,9 @@ import RightArrow from '../components/RightArrow.vue';
           <template #header >
             <span>Progress</span>
           </template>
+          <template #default >
+            <RightArrow/>
+          </template>
         </LineItem>
       </li>
       
@@ -116,13 +119,47 @@ import RightArrow from '../components/RightArrow.vue';
       <li>
         <LineItem>
           <template #header >
-            <span>Progress</span>
+            <span>Dialog</span>
+          </template>
+          <template #default >
+            <RightArrow/>
           </template>
         </LineItem>
       </li>
       
-      
-       
+      <li>
+        <LineItem>
+          <template #header >
+            <span>Picker</span>
+          </template>
+          <template #default >
+            <RightArrow/>
+          </template>
+        </LineItem>
+      </li>
+
+       <li>
+        <LineItem>
+          <template #header >
+            <span>Toast</span>
+          </template>
+          <template #default >
+            <RightArrow/>
+          </template>
+        </LineItem>
+      </li>
+       <li>
+        <LineItem>
+          <template #header >
+            <span>Toptips</span>
+          </template>
+          <template #default >
+            <RightArrow/>
+          </template>
+        </LineItem>
+      </li>
+
+
     </ol>
   </template>
    </FoldPanel>
