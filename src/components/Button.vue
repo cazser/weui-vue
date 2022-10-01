@@ -1,10 +1,12 @@
 <template>
-  <button class="btn" :class="{prime:prime, warning: warning, invalid: invalid}">
+
+<button class="btn" :class="{prime:prime, warning: warning, invalid: invalid}">
     <div v-if="loading" class="weui-primary-loading">
       <div class="weui-primary-loading-inner"></div>
     </div>
     <span><slot></slot></span>
   </button>
+
 </template>
 
 <script setup>
@@ -88,7 +90,7 @@ color: white;
 }
 
 .btn:active{
-   border: 1px solid;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .invalid{
   background-color: #f2f2f2;

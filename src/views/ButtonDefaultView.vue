@@ -15,12 +15,16 @@
       <Button :invalid="true">
         主要操作
       </Button>
+      <LineButton >
+        普通行按钮
+      </LineButton>
     </div>
   </div>
 </template>
 
 <script setup>
   import Button from '../components/Button.vue';
+import LineButton from '../components/LineButton.vue';
 </script>
 
 <style  scoped>

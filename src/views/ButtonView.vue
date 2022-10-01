@@ -2,14 +2,16 @@
   <div class="button-view-wrapper">
     <div>Button</div>
     <div>按钮</div>
-    <router-link to="/button_default" class="btn-item">
+    <div class="btn-list">
+      <router-link to="/button_default" class="btn-item">
+        <Button>
+          普通型
+        </Button>
+      </router-link>
       <Button>
-        普通型
+        底部悬浮型
       </Button>
-    </router-link>
-    <Button>
-      底部悬浮型
-    </Button>
+    </div>
   </div>
 </template>
 
@@ -27,4 +29,12 @@
 .btn-item{
   margin: 10px;
 }
+
+.btn-list{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 </style>
