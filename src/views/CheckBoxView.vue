@@ -2,13 +2,13 @@
   <div class="checkbox-view-wrapper">
     <h2>复选框样式展示</h2>
     {{checked}}
-  <CheckBox v-model="checked">
+  <CheckBox v-model:checked="checked">
     standard is dealt for u.
     </CheckBox>
     <Button :prime="true" class="attachBottom">
       下一步
     </Button>
-
+    
   </div>
 </template>
 
@@ -16,7 +16,8 @@
 import { ref } from 'vue';
 import Button from '../components/Button.vue';
 import CheckBox from '../components/CheckBox.vue';
-const checked = ref(true);
+const checked = ref(false);
+
 </script>
 
 <style  scoped>
