@@ -32,11 +32,13 @@ import LineItem from '../components/LineItem.vue';
   <template #default>
     <ol class="list">
       <li>
+        <router-link to="button">
         <LineItem>
           <template #header >
             <span>Button</span>
           </template>
         </LineItem>
+        </router-link>
       </li>
       <li>
         <LineItem>
