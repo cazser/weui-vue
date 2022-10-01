@@ -117,14 +117,16 @@ import RightArrow from '../components/RightArrow.vue';
   <template #default>
     <ol class="list">
       <li>
-        <LineItem>
-          <template #header >
-            <span>Dialog</span>
-          </template>
-          <template #default >
-            <RightArrow/>
-          </template>
-        </LineItem>
+        <RouterLink to="/dialog">
+          <LineItem>
+            <template #header >
+              <span>Dialog</span>
+            </template>
+            <template #default >
+              <RightArrow/>
+            </template>
+          </LineItem>
+        </RouterLink>
       </li>
       
       <li>

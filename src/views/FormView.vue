@@ -16,12 +16,7 @@
           开关
         </Button>
       </RouterLink>
-      <Button>
-        选择框
-      </Button>
-      <Button>
-        弹出选择框
-      </Button>
+      
     </div>
   </div>
 </template>
