@@ -11,9 +11,11 @@
       <Button>
         单选框
       </Button>
-      <Button>
-        开关
-      </Button>
+      <RouterLink to="/switch">
+        <Button>
+          开关
+        </Button>
+      </RouterLink>
       <Button>
         选择框
       </Button>
