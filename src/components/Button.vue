@@ -1,17 +1,19 @@
 <template>
-  <button class="btn" :class="{warning: warning}">
-  
-    <slot></slot>
+  <button class="btn" :class="{prime:prime, warning: warning}">
+    <span></span>
+    <span><slot></slot></span>
   </button>
 </template>
 
 <script setup>
 const props = defineProps({
-warning: Boolean
+warning: {type: Boolean},
+prime: {type: Boolean}
 })
 
 
 const warning = props.warning;
+const prime = props.prime;
 </script>
 
 <style  scoped>
@@ -36,7 +38,10 @@ const warning = props.warning;
     background: #fff;
     margin: 8px;
 }
-
+.prime{
+background: #07c160;
+color: white;
+}
 .warning{
   color: red;
 }

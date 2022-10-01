@@ -6,7 +6,7 @@
       <Button>
         主要操作
       </Button>
-      <Button>
+      <Button :prime="true">
         主要操作
       </Button>
        <Button :warning="true">
