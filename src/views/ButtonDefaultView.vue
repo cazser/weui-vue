@@ -12,7 +12,7 @@
        <Button :warning="true">
         主要操作
       </Button>
-      <Button>
+      <Button :invalid="true">
         主要操作
       </Button>
     </div>
@@ -36,4 +36,6 @@
   flex-direction: column;
   align-items: center;
 }
+
+
 </style>
