@@ -45,6 +45,7 @@ import RightArrow from '../components/RightArrow.vue';
         </router-link>
       </li>
       <li>
+        <router-link to="form">
         <LineItem>
           <template #header >
             <span>Form</span>
@@ -53,6 +54,7 @@ import RightArrow from '../components/RightArrow.vue';
             <RightArrow/>
           </template>
         </LineItem>
+        </router-link>
       </li>
       <li>
         <LineItem>

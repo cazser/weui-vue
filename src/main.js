@@ -5,10 +5,12 @@ import { createRouter } from 'vue-router';
 import Home from './views/Home.vue'
 import ButtonView from './views/ButtonView.vue'
 import ButtonDefaultView from './views/ButtonDefaultView.vue'
+import FormView from './views/FormView.vue'
 import { createWebHashHistory } from 'vue-router';
 const routes=[{ path: '/', component: Home },
               {path:'/button', component: ButtonView},
-            {path:'/button_default', component: ButtonDefaultView}];
+            {path:'/button_default', component: ButtonDefaultView},
+             {path:'/form', component: FormView}];
 const router=createRouter(
   {
      history: createWebHashHistory(),
