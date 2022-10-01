@@ -1,12 +1,17 @@
 <template>
-  <button class="btn">
+  <button class="btn" :class="{warning: warning}">
   
     <slot></slot>
   </button>
 </template>
 
 <script setup>
+const props = defineProps({
+warning: Boolean
+})
 
+
+const warning = props.warning;
 </script>
 
 <style  scoped>
@@ -29,5 +34,10 @@
     color: #07c160;
     user-select: none;
     background: #fff;
+    margin: 8px;
+}
+
+.warning{
+  color: red;
 }
 </style>
