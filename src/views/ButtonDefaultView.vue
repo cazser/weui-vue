@@ -3,7 +3,7 @@
     <div>Button</div>
     <div>按钮</div>
     <div class="btn-list">
-      <Button>
+      <Button :loading="true">
         主要操作
       </Button>
       <Button :prime="true">

@@ -1,6 +1,8 @@
 <template>
   <button class="btn" :class="{prime:prime, warning: warning}">
-    <span></span>
+    <div v-if="loading" class="weui-primary-loading">
+      <div class="weui-primary-loading-inner"></div>
+    </div>
     <span><slot></slot></span>
   </button>
 </template>
@@ -8,12 +10,14 @@
 <script setup>
 const props = defineProps({
 warning: {type: Boolean},
-prime: {type: Boolean}
+prime: {type: Boolean},
+loading: {type: Boolean}
 })
 
 
 const warning = props.warning;
 const prime = props.prime;
+const loading = props.loading;
 </script>
 
 <style  scoped>
@@ -45,4 +49,41 @@ color: white;
 .warning{
   color: red;
 }
+.loading-dot{
+    
+    top: 0;
+    left: 50%;
+    margin-left: -0.0625em;
+    width: 0.125em;
+    height: 0.125em;
+    border-top-right-radius: 0.125em;
+    border-bottom-right-radius: 0.125em;
+    background: currentColor;
+}
+
+.weui-primary-loading{
+  width: 1em;
+  height: 1em;
+  border-top: 2px dotted;
+  display: inline-block;
+  border-radius: 50%;
+ animation:mymove 1s linear infinite;
+}
+
+
+  @keyframes mymove
+{
+ 0% {
+     transform:  rotate(-540deg); 
+    }
+
+  100% {
+      transform: rotate(0deg);
+      }
+
+
+}
+
+
+
 </style>
