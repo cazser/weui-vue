@@ -3,6 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import FoldPanel from '../components/FoldPanel.vue';
 import LineItem from '../components/LineItem.vue';
+import RightArrow from '../components/RightArrow.vue';
 
 </script>
 
@@ -37,20 +38,29 @@ import LineItem from '../components/LineItem.vue';
           <template #header >
             <span>Button</span>
           </template>
+          <template #default >
+            <RightArrow/>
+          </template>
         </LineItem>
         </router-link>
       </li>
       <li>
         <LineItem>
           <template #header >
-            <span>Button</span>
+            <span>Form</span>
+          </template>
+          <template #default >
+            <RightArrow/>
           </template>
         </LineItem>
       </li>
       <li>
         <LineItem>
           <template #header >
-            <span>Button</span>
+            <span>List</span>
+          </template>
+          <template #default >
+            <RightArrow/>
           </template>
         </LineItem>
       </li>   
