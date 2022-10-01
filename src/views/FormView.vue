@@ -3,11 +3,11 @@
     <div>Form</div>
     <div>表单页</div>
     <div class="btn-list">
-      
+      <RouterLink to="/checkbox">
         <Button>
           复选框
         </Button>
-    
+      </RouterLink>
       <Button>
         单选框
       </Button>
