@@ -133,14 +133,16 @@ import Overlay from '../components/Overlay.vue';
       </li>
       
       <li>
-        <LineItem>
-          <template #header >
-            <span>Picker</span>
-          </template>
-          <template #default >
-            <RightArrow/>
-          </template>
-        </LineItem>
+        <RouterLink to="/picker">
+          <LineItem>
+            <template #header >
+              <span>Picker</span>
+            </template>
+            <template #default >
+              <RightArrow/>
+            </template>
+          </LineItem>
+        </RouterLink>
       </li>
 
        <li>

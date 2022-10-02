@@ -35,6 +35,10 @@ export default {
     title:{
       type: String,
       default:""
+    },
+    kind:{
+      type:String,
+      default:"1"
     }
   },
   components: { Button, Overlay },
