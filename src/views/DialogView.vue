@@ -5,7 +5,9 @@
     <div class="btn-list">
       
       <Button @click="toggle">ios Dialog样式一</Button>  
-      <Dialog :visible="y"></Dialog>  
+      <Dialog :visible="y" title="弹窗标题">
+       <div>弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+      </Dialog>  
       <Button>
         底部悬浮型
       </Button>
