@@ -1,11 +1,17 @@
-<script setup>
+<script >
 import { ref } from 'vue'
 
-const props = defineProps({
-  visible:{type: Boolean, default: false}
-})
-
-const visible = props.visible;
+export default{
+  props:{
+    'visible':{type: Boolean}
+  },
+  setup(props, context){
+    const visible = "yes";
+    return{
+      visible
+    }
+  }
+}
 </script>
 
 <template>

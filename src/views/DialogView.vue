@@ -6,8 +6,8 @@
         <Button @click="onclick1">
           iOS Dialog 样式一
         </Button>
-        <Dialog :visible="dialogVisibleControl" />
-        {{dialogVisibleControl}}
+        <Dialog v-if="x" />
+        {{x}}
       <Button>
         iOS Dialog 样式二
       </Button>
@@ -18,10 +18,10 @@
 <script setup>
   import { ref } from 'vue';
   import Button from '../components/Button.vue';
-import Dialog from '../components/Dialog.vue';
-  const dialogVisibleControl= ref(true);
+  import Dialog from '../components/Dialog.vue';
+  const x= ref(true);
   const onclick1 = ()=>{
-    dialogVisibleControl.value = !dialogVisibleControl.value;
+    x.value = !x.value;
   }
 </script>
 
