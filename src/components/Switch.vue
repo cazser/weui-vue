@@ -37,7 +37,7 @@ const onclick=()=>{state.value=!state.value}
   bottom: 1px;
   background: white;
   right: 2px;
-  transition: right 0.5s;
+  transition: right 250ms;
 }
 
 .open1{
