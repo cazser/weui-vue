@@ -4,7 +4,7 @@
     
   <overlay>
     <div class="content">
-       content
+       <slot></slot>
     </div>
   </overlay>    
     
@@ -36,7 +36,9 @@ export default {
   height: 100px;
   background:  red;
   position: absolute;
-  top:100px;
-  left: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
 }
 </style>

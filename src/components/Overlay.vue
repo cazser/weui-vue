@@ -18,6 +18,7 @@
   top:0;
   left:0;
   background-color: rgba(100, 100, 100, 0.5);
+  z-index: 10;
 }
 
 </style>
