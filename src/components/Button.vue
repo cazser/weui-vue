@@ -38,13 +38,12 @@ const invalid = props.invalid;
     font-size: 17px;
     text-align: center;
     text-decoration: none;
-    color: #fff;
     line-height: 1.88235294;
     border-radius: 8px;
     border: none;
     color: #07c160;
     user-select: none;
-    background: #fff;
+    background: #f9f9f9;
     margin: 8px;
 }
 .prime{

@@ -1,9 +1,19 @@
 <template>
+  <div class="view-wrapper">
+    <div>Dialog</div>
+    <div>对话框</div>
+    <div class="btn-list">
+      
+      <Button @click="toggle">ios Dialog样式一</Button>  
+      <Dialog :visible="y"></Dialog>  
+      <Button>
+        底部悬浮型
+      </Button>
+    </div>
+  </div>
   <h1>Dialog示例</h1>
   <div>
-    <h2>示例一</h2>
-    <Button @click="toggle">toggle</Button>  
-    <Dialog :visible="y"></Dialog>  
+     
   </div>
 </template>
 <script lang="ts">
@@ -22,3 +32,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .view-wrapper{
+    padding: 36px;
+  min-height: 100vh;
+  background-color: #fff;
+  }
+
+
+  .btn-list{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

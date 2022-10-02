@@ -9,8 +9,8 @@
           <p>第二行字</p>
         </main>
         <footer>
-          <Button level="main">OK</Button>
-          <Button>Cancel</Button>
+          <button>ok</button>
+          <button>cancel</button>
         </footer>
       </div>
     </div>
