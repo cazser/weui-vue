@@ -1,46 +1,24 @@
 <template>
-  <div class="view-wrapper">
-    <div>Dialog</div>
-    <div>对话框</div>
-    <div class="btn-list">
-        <Button @click="onclick1">
-          iOS Dialog 样式一
-        </Button>
-        <Dialog v-if="x" />
-        {{x}}
-      <Button>
-        iOS Dialog 样式二
-      </Button>
-    </div>
+  <h1>Dialog示例</h1>
+  <div>
+    <h2>示例一</h2>
+    <Button @click="toggle">toggle</Button>  
+    <Dialog :visible="y"></Dialog>  
   </div>
 </template>
+<script lang="ts">
+import Dialog from '../components/Dialog.vue'
+import Button from '../components/Button.vue';
+import {ref} from 'vue';
 
-<script setup>
-  import { ref } from 'vue';
-  import Button from '../components/Button.vue';
-  import Dialog from '../components/Dialog.vue';
-  const x= ref(true);
-  const onclick1 = ()=>{
-    x.value = !x.value;
+export default {
+  components: {Button, Dialog},
+  setup() {
+    const y = ref(false);
+    const toggle = () => {
+      y.value = !y.value;
+    };
+    return {y, toggle};
   }
+};
 </script>
-
-<style  scoped>
-.view-wrapper{
-  padding: 36px;
-  min-height: 100vh;
-  background-color: #f2f2f2;
-}
-
-.btn-item{
-  margin: 10px;
-}
-
-.btn-list{
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-</style>
