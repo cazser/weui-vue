@@ -3,9 +3,10 @@
     <div>Dialog</div>
     <div>对话框</div>
     <div class="btn-list">
-        <Button>
+        <Button @click="onclick1">
           iOS Dialog 样式一
         </Button>
+        {{dialogVisibleControl}}
       <Button>
         iOS Dialog 样式二
       </Button>
@@ -14,7 +15,12 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   import Button from '../components/Button.vue';
+  const dialogVisibleControl= ref(false);
+  const onclick1 = ()=>{
+    dialogVisibleControl.value = !dialogVisibleControl.value;
+  }
 </script>
 
 <style  scoped>
