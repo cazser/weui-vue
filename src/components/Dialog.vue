@@ -1,8 +1,8 @@
 <template>
   
   <template v-if="visible">
-    <div>
-    <div class="weui-dialog-overlay"></div>
+    
+    <div class="weui-dialog-overlay">
     <div class="weui-dialog-wrapper">
       
         <header class="weui-dialog-title">{{title}}</header>
@@ -16,6 +16,7 @@
       
     </div>
     </div>
+    
   </template>
   
 </template>
@@ -47,7 +48,7 @@ export default {
   }
 
   .weui-dialog-wrapper{
-    position: fixed;
+    position:  absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
