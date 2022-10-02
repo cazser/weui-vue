@@ -1,10 +1,10 @@
 <template>
   
   <template v-if="visible">
-    
+    <div>
     <div class="weui-dialog-overlay"></div>
     <div class="weui-dialog-wrapper">
-      <div class="weui-dialog">
+      
         <header class="weui-dialog-title">{{title}}</header>
         <main>
           <slot></slot>
@@ -13,9 +13,9 @@
           <button>ok</button>
           <button>cancel</button>
         </footer>
-      </div>
+      
     </div>
-    
+    </div>
   </template>
   
 </template>
@@ -43,7 +43,7 @@ export default {
     border-radius: 16px;
      padding: 24px;
      width: 270px;
-     z-index: 15;
+     z-index: 12;
   }
 
   .weui-dialog-wrapper{
