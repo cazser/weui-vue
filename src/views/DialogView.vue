@@ -12,7 +12,7 @@
             </div>
           </template>
         <template #leftbutton>
-          辅助操作  
+         <span @click="onclick"> 辅助操作 </span> 
         </template>
         <template #rightbutton >
           主操作
@@ -40,7 +40,11 @@ export default {
     const toggle = () => {
       y.value = !y.value;
     };
-    return {y, toggle};
+    const onclick = ()=>{
+      console.log(1);
+      toggle();
+    }
+    return {y, toggle, onclick};
   }
 };
 </script>
