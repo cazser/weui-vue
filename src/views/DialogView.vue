@@ -15,7 +15,9 @@
          <span @click="onclick"> 辅助操作 </span> 
         </template>
         <template #rightbutton >
+          <span @click="onclick">
           主操作
+          </span>
         </template>
       </Dialog>  
       <Button>
@@ -41,7 +43,7 @@ export default {
       y.value = !y.value;
     };
     const onclick = ()=>{
-      console.log(1);
+      //console.log(1);
       toggle();
     }
     return {y, toggle, onclick};
