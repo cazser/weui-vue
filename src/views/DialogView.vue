@@ -1,13 +1,38 @@
 <template>
-  <div>
-    Dialog view
+  <div class="view-wrapper">
+    <div>Dialog</div>
+    <div>对话框</div>
+    <div class="btn-list">
+        <Button>
+          iOS Dialog 样式一
+        </Button>
+      <Button>
+        iOS Dialog 样式二
+      </Button>
+    </div>
   </div>
 </template>
 
 <script setup>
-  
+  import Button from '../components/Button.vue';
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+.view-wrapper{
+  padding: 36px;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.btn-item{
+  margin: 10px;
+}
+
+.btn-list{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 </style>
