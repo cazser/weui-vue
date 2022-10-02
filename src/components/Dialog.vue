@@ -2,14 +2,14 @@
 import { ref } from 'vue'
 
 const props = defineProps({
-  visible: Boolean
+  visible:{type: Boolean, default: false}
 })
 
 const visible = props.visible;
 </script>
 
 <template>
-  <div class="dialog-wrapper">
+  <div class="dialog-wrapper" v-if="visible">
     <div>我是dialog</div>  
     <div>inner {{visible}}</div>
   </div>

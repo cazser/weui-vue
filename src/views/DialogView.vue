@@ -19,7 +19,7 @@
   import { ref } from 'vue';
   import Button from '../components/Button.vue';
 import Dialog from '../components/Dialog.vue';
-  const dialogVisibleControl= ref(false);
+  const dialogVisibleControl= ref(true);
   const onclick1 = ()=>{
     dialogVisibleControl.value = !dialogVisibleControl.value;
   }
