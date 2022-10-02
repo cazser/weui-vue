@@ -4,6 +4,7 @@
     
   <overlay>
     <div class="content">
+      <header class="weui-dialog-title">{{title}}</header>
        <slot></slot>
     </div>
   </overlay>    
@@ -34,11 +35,20 @@ export default {
   .content{
   width: 100px;
   height: 100px;
-  background:  red;
+  background:  #fff;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: start;
   transform: translate(-50%, -50%);
+  min-width: 270px;
+  min-height: 150px;
   border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.weui-dialog-title{
+  padding: 12px;
+  text-align: center;
 }
 </style>
