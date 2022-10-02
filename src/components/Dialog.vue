@@ -8,7 +8,7 @@
       <div class="weui-dialog-content">
       <slot></slot>
       </div>
-       <div class="button-wrapper">
+       <div class="button-wrapper" @click="onclose">
         <div class="leftbutton">
           <slot name="leftbutton"></slot>
         </div>
@@ -37,7 +37,13 @@ export default {
       default:""
     }
   },
-  components: { Button, Overlay }
+  components: { Button, Overlay },
+  setup(props, context){
+    const onclose=()=>{
+      context.emit("update:visible", false);
+    }
+    return {onclose}
+  }
 }
 </script>
 
