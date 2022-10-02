@@ -6,6 +6,7 @@
         <Button @click="onclick1">
           iOS Dialog 样式一
         </Button>
+        <Dialog :visible="dialogVisibleControl" />
         {{dialogVisibleControl}}
       <Button>
         iOS Dialog 样式二
@@ -17,6 +18,7 @@
 <script setup>
   import { ref } from 'vue';
   import Button from '../components/Button.vue';
+import Dialog from '../components/Dialog.vue';
   const dialogVisibleControl= ref(false);
   const onclick1 = ()=>{
     dialogVisibleControl.value = !dialogVisibleControl.value;
