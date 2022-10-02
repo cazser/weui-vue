@@ -6,10 +6,17 @@
 
 <script setup>
 import { ref } from 'vue';
-
+const props = defineProps({on: Boolean});
+const emits = defineEmits(
+    ['update:on']
+  );
   
-const state =  ref(true);  
-const onclick=()=>{state.value=!state.value}
+  
+const state =  ref(props.on);  
+const onclick=()=>{
+  state.value=!state.value;
+  emits("update:on", state.value);
+}
 </script>
 
 <style scoped>

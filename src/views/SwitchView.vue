@@ -6,18 +6,20 @@
 
     <LineItem >
       <template #header>
-        标题文字
+        标题文字{{on}}
       </template>
       <template #default  >
-        <Switch />
+        <Switch v-model:on =on />
       </template>
     </LineItem>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import LineItem from '../components/LineItem.vue';
 import Switch from '../components/Switch.vue';  
+const on = ref(false);
 </script>
 
 <style scoped>
