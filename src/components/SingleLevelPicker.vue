@@ -28,12 +28,12 @@
 <script>
 import Overlay from './Overlay.vue';
 import Button from './Button.vue';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
   export default {
     props: {
         visible: { type: Boolean, default: false },
         title:{tyep:String, default:""},
-        options:{type: Array, default:[], selected:true}
+        options:{type: Array, default:[]}
     },
     setup(props, context) {
         const onclose = () => {
@@ -42,7 +42,7 @@ import { ref } from 'vue';
         const onclick=()=>{
           onclose();
         };
-        const innerOptions=[];
+        const innerOptions=reactive( [] );
         for(let i=0; i<props.options.length; i++){
           innerOptions.push({id:i, text: props.options[i]});
         };
