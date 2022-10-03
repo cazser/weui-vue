@@ -176,7 +176,43 @@ import Overlay from '../components/Overlay.vue';
    </FoldPanel>
  
    </li>
-   </ul>
+    <li>
+    <FoldPanel>
+    <template #header>
+    <LineItem>
+      <template #header >
+        <span>多媒体相关</span>
+      </template>
+      <template #default >
+        <span>
+          <img src="../images/icon_nav_layout.png" alt=" 展开"  class="small-img" />
+        </span>
+      </template>
+    </LineItem>
+  </template>
+
+  <template #default>
+    <ol class="list">
+      <li>
+        <RouterLink to="/progress">
+          <LineItem>
+            <template #header >
+              <span>Progress</span>
+            </template>
+            <template #default >
+              <RightArrow/>
+            </template>
+          </LineItem>
+        </RouterLink>
+      </li>
+      
+      
+       
+    </ol>
+  </template>
+   </FoldPanel>
+   </li>
+  </ul>
 
 
   </div>
