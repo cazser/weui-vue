@@ -2,17 +2,16 @@
   <template v-if="visible">
   <Overlay>
   <div class="singlePickerWrapper">
-    <div @click="onclose" class="title">
-      <img class="close-icon" src="../images/close.svg"/>
+    <div  class="title">
+      <img  @click="onclose" class="close-icon" src="../images/close.svg"/>
       <span>{{title}}</span>
     </div>
-    <div>
-      <ol>
-        <li v-for="option in options">
-          {{option}}
-        </li>
-      </ol>
-    </div>
+    <ol class="singlePicker-content">
+      <li v-for="option in options">
+        {{option}}
+      </li>
+    </ol>
+    
     <div class="button-wrapper">
       <Button @click="onclick" :prime="true">
         确定
@@ -76,5 +75,11 @@ import Button from './Button.vue';
  .button-wrapper{
    position: absolute;
    bottom: 20px;
+ }
+
+ .singlePicker-content{
+  max-height: calc(60%);
+  overflow-y: scroll;
+  padding: 12px;
  }
 </style>
