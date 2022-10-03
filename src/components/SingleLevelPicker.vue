@@ -6,12 +6,12 @@
       <img  @click="onclose" class="close-icon" src="../images/close.svg"/>
       <span>{{title}}</span>
     </div>
-    {{selectIndex}}
+  
     <ol class="singlePicker-content">
       <li v-for="option in innerOptions" 
       key="option.id" @click="onSelect(option)"
       :class="{selected: option.selected}">
-        {{option.text}} {{option.selected}}
+        {{option.text}}
       </li>
     </ol>
     
@@ -52,6 +52,7 @@ import { reactive, ref } from 'vue';
       
         const onSelect=(option)=>{
           selectIndex.value = option.id;
+          innerOptions.forEach(option=> option.selected = option.id===selectIndex.value);
         }
         return { onclose , onclick, innerOptions, selectIndex, onSelect};
     },
@@ -96,5 +97,9 @@ import { reactive, ref } from 'vue';
   max-height: calc(60%);
   overflow-y: scroll;
   padding: 18px;
+ }
+
+ .selected{
+  background: #ebebeb;
  }
 </style>
