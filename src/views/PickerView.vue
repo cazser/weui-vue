@@ -12,11 +12,22 @@
         日期选择器
       </Button>
     </div>
+    {{y}}
+    <Button @click="toggle">
+      toggle
+    </Button>
+    <SingleLevelPicker :visible=  "y"></SingleLevelPicker>
   </div>
 </template>
 
 <script setup>
-  import Button from '../components/Button.vue';
+  import { ref } from 'vue';
+import Button from '../components/Button.vue';
+import SingleLevelPicker from '../components/SingleLevelPicker.vue';
+
+  const y = ref(true);
+
+  const toggle = ()=> y.value = !y.value;
 </script>
 
 <style  scoped>
