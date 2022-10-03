@@ -13,9 +13,11 @@
         </li>
       </ol>
     </div>
-    <Button :prime="true">
-      确定
-    </Button>
+    <div class="button-wrapper">
+      <Button @click="onclick" :prime="true">
+        确定
+      </Button>
+    </div>
   </div>
   </Overlay>
   </template>
@@ -34,7 +36,10 @@ import Button from './Button.vue';
         const onclose = () => {
             context.emit("update:visible", false);
         };
-        return { onclose };
+        const onclick=()=>{
+          onclose();
+        }
+        return { onclose , onclick};
     },
     components: { Overlay, Button }
 }
@@ -66,5 +71,10 @@ import Button from './Button.vue';
   display: flex;
   flex-direction: column;
   align-items: center;
+ }
+
+ .button-wrapper{
+   position: absolute;
+   bottom: 20px;
  }
 </style>
