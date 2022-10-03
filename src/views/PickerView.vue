@@ -4,7 +4,7 @@
     <div>多列选择器，需要配合js实现</div>
     <div class="btn-list">
     
-        <Button>
+        <Button @click="toggle">
           单列选择器
         </Button>
       
@@ -12,11 +12,9 @@
         日期选择器
       </Button>
     </div>
-    {{y}}
-    <Button @click="toggle">
-      toggle
-    </Button>
-    <SingleLevelPicker v-model:visible="y"></SingleLevelPicker>
+    
+    <SingleLevelPicker v-model:visible="y"
+                       title="单列选择器" />
   </div>
 </template>
 

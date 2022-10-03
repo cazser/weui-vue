@@ -4,9 +4,9 @@
   <div class="singlePickerWrapper">
     <div @click="onclose" class="title">
       <img class="close-icon" src="../images/close.svg"/>
+      <span>{{title}}</span>
     </div>
-    Single Picker
-    {{visible}}
+    
   </div>
   </Overlay>
   </template>
@@ -16,7 +16,8 @@
 import Overlay from './Overlay.vue';
   export default {
     props: {
-        visible: { type: Boolean, default: false }
+        visible: { type: Boolean, default: false },
+        title:{tyep:String, default:""}
     },
     setup(props, context) {
         const onclose = () => {
@@ -30,10 +31,14 @@ import Overlay from './Overlay.vue';
 
 <style scoped>
  .close-icon{
+  float: left;
   max-height: 18px;
+
  }
  .title{
    padding: 18px;
+   text-align: center;
+   font-weight: bolder;
  }
  .singlePickerWrapper{
   position: absolute;
