@@ -14,17 +14,18 @@
     </div>
     
     <SingleLevelPicker v-model:visible="y"
-                       title="单列选择器" />
+                       title="单列选择器" 
+                       :options="options" />
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
-import Button from '../components/Button.vue';
-import SingleLevelPicker from '../components/SingleLevelPicker.vue';
+  import Button from '../components/Button.vue';
+  import SingleLevelPicker from '../components/SingleLevelPicker.vue';
 
   const y = ref(true);
-
+  const options = ["飞机票", "火车票", "出租车", "公交票", "其他"]
   const toggle = ()=> y.value = !y.value;
 </script>
 

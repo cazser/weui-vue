@@ -6,7 +6,13 @@
       <img class="close-icon" src="../images/close.svg"/>
       <span>{{title}}</span>
     </div>
-    
+    <div>
+      <ol>
+        <li v-for="option in options">
+          {{option}}
+        </li>
+      </ol>
+    </div>
   </div>
   </Overlay>
   </template>
@@ -17,7 +23,8 @@ import Overlay from './Overlay.vue';
   export default {
     props: {
         visible: { type: Boolean, default: false },
-        title:{tyep:String, default:""}
+        title:{tyep:String, default:""},
+        options:{type: Array, default:[]}
     },
     setup(props, context) {
         const onclose = () => {
