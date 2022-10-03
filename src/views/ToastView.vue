@@ -1,13 +1,19 @@
 <template>
   <div class="button-view-wrapper">
     <div>Toast</div>
-    <div></div>
+    <div>弹出式提示</div>
     <div class="btn-list">
         <Button>
-          普通型
+          成功提示
         </Button>
       <Button>
-        底部悬浮型
+        失败提示
+      </Button>
+      <Button>
+          加载中提示
+      </Button>
+      <Button>
+        文字提示
       </Button>
     </div>
   </div>
@@ -21,7 +27,7 @@
 .button-view-wrapper{
   padding: 36px;
   min-height: 100vh;
-  background-color: #ededed;
+  background-color: #fff;
 }
 
 .btn-item{
@@ -31,6 +37,7 @@
 .btn-list{
   width:100%;
   display: flex;
+  padding-top: 36px;
   flex-direction: column;
   align-items: center;
 }
