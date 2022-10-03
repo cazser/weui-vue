@@ -1,6 +1,6 @@
 <template>
   <div class="progress-wrapper">
-      进度条
+    <div class="progress-outer" ></div>
   </div>
 </template>
 
@@ -12,6 +12,13 @@
 
 <style  scoped>
  .progress-wrapper{
+  border: 1px solid;
+  width: 360px;
+ }
+
+ .progress-outer{
+  width: 100%;
+  background: rgba(66,66, 66, 0.1);
   border: 1px solid;
  }
 </style>
