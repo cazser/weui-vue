@@ -80,6 +80,6 @@ import Button from './Button.vue';
  .singlePicker-content{
   max-height: calc(60%);
   overflow-y: scroll;
-  padding: 12px;
+  padding: 18px;
  }
 </style>
