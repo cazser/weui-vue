@@ -6,9 +6,11 @@
       <img  @click="onclose" class="close-icon" src="../images/close.svg"/>
       <span>{{title}}</span>
     </div>
-    
+    {{selectIndex}}
     <ol class="singlePicker-content">
-      <li v-for="option in innerOptions" key="option.id">
+      <li v-for="option in innerOptions" 
+      key="option.id" @click="onSelect(option)"
+      :class="{selected: option.selected}">
         {{option.text}}
       </li>
     </ol>
@@ -31,7 +33,7 @@ import { ref } from 'vue';
     props: {
         visible: { type: Boolean, default: false },
         title:{tyep:String, default:""},
-        options:{type: Array, default:[]}
+        options:{type: Array, default:[], selected:true}
     },
     setup(props, context) {
         const onclose = () => {
@@ -46,7 +48,10 @@ import { ref } from 'vue';
         };
       
         const selectIndex = ref(0);
-        return { onclose , onclick, innerOptions, selectIndex};
+        const onSelect=(option)=>{
+          selectIndex.value = option.id;
+        }
+        return { onclose , onclick, innerOptions, selectIndex, onSelect};
     },
     components: { Overlay, Button }
 }
