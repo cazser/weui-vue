@@ -33,7 +33,8 @@ import { reactive, ref } from 'vue';
     props: {
         visible: { type: Boolean, default: false },
         title:{tyep:String, default:""},
-        options:{type: Array, default:[]}
+        options:{type: Array, default:[]},
+        reference:{type:String}
     },
     setup(props, context) {
         const onclose = () => {

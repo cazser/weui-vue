@@ -16,7 +16,7 @@
     <SingleLevelPicker v-model:visible="y"
                        title="单列选择器" 
                        :options="options" 
-                       />
+                       v-model:reference="reference" />
   </div>
 </template>
 
