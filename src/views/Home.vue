@@ -84,14 +84,16 @@ import Overlay from '../components/Overlay.vue';
   <template #default>
     <ol class="list">
       <li>
-        <LineItem>
-          <template #header >
-            <span>Progress</span>
-          </template>
-          <template #default >
-            <RightArrow/>
-          </template>
-        </LineItem>
+        <RouterLink to="/progress">
+          <LineItem>
+            <template #header >
+              <span>Progress</span>
+            </template>
+            <template #default >
+              <RightArrow/>
+            </template>
+          </LineItem>
+        </RouterLink>
       </li>
       
       
