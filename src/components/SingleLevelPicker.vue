@@ -40,6 +40,13 @@ import { reactive, ref } from 'vue';
             context.emit("update:visible", false);
         };
         const onclick=()=>{
+          let result ="";
+          innerOptions.forEach((option)=>{
+            if(option.selected){
+              result = option.text;
+            }
+          });
+          context.emit("update:reference", result );
           onclose();
         };
 

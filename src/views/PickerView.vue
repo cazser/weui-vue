@@ -12,10 +12,11 @@
         日期选择器
       </Button>
     </div>
-    
+    {{reference}}    
     <SingleLevelPicker v-model:visible="y"
                        title="单列选择器" 
-                       :options="options" />
+                       :options="options" 
+                       />
   </div>
 </template>
 
@@ -27,6 +28,7 @@
   const y = ref(false);
   const options = ["飞机票", "火车票", "出租车", "公交票", "其他", ];
   const toggle = ()=> y.value = !y.value;
+  const reference = ref("1");
 </script>
 
 <style  scoped>
