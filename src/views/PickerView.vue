@@ -16,7 +16,7 @@
     <Button @click="toggle">
       toggle
     </Button>
-    <SingleLevelPicker :visible=  "y"></SingleLevelPicker>
+    <SingleLevelPicker v-model:visible="y"></SingleLevelPicker>
   </div>
 </template>
 
