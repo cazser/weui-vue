@@ -13,6 +13,9 @@
         </li>
       </ol>
     </div>
+    <Button :prime="true">
+      确定
+    </Button>
   </div>
   </Overlay>
   </template>
@@ -20,6 +23,7 @@
 
 <script>
 import Overlay from './Overlay.vue';
+import Button from './Button.vue';
   export default {
     props: {
         visible: { type: Boolean, default: false },
@@ -32,7 +36,7 @@ import Overlay from './Overlay.vue';
         };
         return { onclose };
     },
-    components: { Overlay }
+    components: { Overlay, Button }
 }
 </script>
 
@@ -46,6 +50,7 @@ import Overlay from './Overlay.vue';
    padding: 18px;
    text-align: center;
    font-weight: bolder;
+   width: 100%;
  }
  .singlePickerWrapper{
   position: absolute;
@@ -58,5 +63,8 @@ import Overlay from './Overlay.vue';
   border-top-right-radius: 12px;
   width: 100%;
   height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  }
 </style>
