@@ -1,15 +1,42 @@
 <template>
-  <div>
-   PickerView
+  <div class="button-view-wrapper">
+    <div>Picker</div>
+    <div>多列选择器，需要配合js实现</div>
+    <div class="btn-list">
+    
+        <Button>
+          单列选择器
+        </Button>
+      
+      <Button>
+        日期选择器
+      </Button>
+    </div>
   </div>
 </template>
 
-<script>
-  export default {
-    
-  }
+<script setup>
+  import Button from '../components/Button.vue';
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+.button-view-wrapper{
+  padding: 36px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.btn-item{
+  margin: 10px;
+
+}
+
+.btn-list{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
 
 </style>
