@@ -146,14 +146,16 @@ import Overlay from '../components/Overlay.vue';
       </li>
 
        <li>
-        <LineItem>
-          <template #header >
-            <span>Toast</span>
-          </template>
-          <template #default >
-            <RightArrow/>
-          </template>
+        <RouterLink to="/toast">
+          <LineItem>
+            <template #header >
+              <span>Toast</span>
+            </template>
+            <template #default >
+              <RightArrow/>
+            </template>
         </LineItem>
+        </RouterLink>
       </li>
        <li>
         <LineItem>
