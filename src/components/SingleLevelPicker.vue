@@ -7,8 +7,8 @@
       <span>{{title}}</span>
     </div>
     <ol class="singlePicker-content">
-      <li v-for="option in options">
-        {{option}}
+      <li v-for="option in innerOptions" key="option.id">
+        {{option.text}}
       </li>
     </ol>
     
@@ -37,8 +37,12 @@ import Button from './Button.vue';
         };
         const onclick=()=>{
           onclose();
+        };
+        const innerOptions=[];
+        for(let i=0; i<props.options.length; i++){
+          innerOptions.push({id:i, text: props.options[i]});
         }
-        return { onclose , onclick};
+        return { onclose , onclick, innerOptions};
     },
     components: { Overlay, Button }
 }

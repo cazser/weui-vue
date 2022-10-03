@@ -25,9 +25,7 @@
   import SingleLevelPicker from '../components/SingleLevelPicker.vue';
 
   const y = ref(false);
-  const options = ["飞机票", "火车票", "出租车", "公交票", "其他", "飞机票",
-  "火车票", "出租车", "公交票", "其他", "飞机票", "火车票", "出租车", "公交票", 
-  "其他", "飞机票", "火车票", "出租车", "公交票","其他"]
+  const options = ["飞机票", "火车票", "出租车", "公交票", "其他", ];
   const toggle = ()=> y.value = !y.value;
 </script>
 
