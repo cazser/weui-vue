@@ -6,13 +6,14 @@
         <Button>
           进度条
         </Button>
-      
+      <Progress />
     </div>
   </div>
 </template>
 
 <script setup>
   import Button from '../components/Button.vue';
+import Progress from '../components/Progress.vue';
 </script>
 
 <style  scoped>
