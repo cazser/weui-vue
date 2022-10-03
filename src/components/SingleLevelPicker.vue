@@ -11,7 +11,7 @@
       <li v-for="option in innerOptions" 
       key="option.id" @click="onSelect(option)"
       :class="{selected: option.selected}">
-        {{option.text}}
+        {{option.text}} {{option.selected}}
       </li>
     </ol>
     
@@ -42,12 +42,14 @@ import { reactive, ref } from 'vue';
         const onclick=()=>{
           onclose();
         };
+
+
+        const selectIndex = ref(0);
         const innerOptions=reactive( [] );
         for(let i=0; i<props.options.length; i++){
-          innerOptions.push({id:i, text: props.options[i]});
+          innerOptions.push({id:i, text: props.options[i], selected:selectIndex.value===i });
         };
       
-        const selectIndex = ref(0);
         const onSelect=(option)=>{
           selectIndex.value = option.id;
         }
