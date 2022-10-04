@@ -7,7 +7,9 @@
           成功提示
         </Button>
        {{y}} 
-       <Toast :visible="y"/>
+       <Toast v-model:visible="y">
+        成功提示
+       </Toast>
     </div>
   </div>
 </template>
