@@ -7,16 +7,16 @@
           成功提示
         </Button>
        {{y}} 
-       <Toast/>
+       <Toast :visible="y"/>
     </div>
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
-import Button from '../components/Button.vue';
+  import Button from '../components/Button.vue';
   import Toast from '../components/Toast.vue'
-import Toast from '../components/Toast.vue';
+
   const y = ref(false);
   const toggle = ()=>{y.value = !y.value;}
 </script>

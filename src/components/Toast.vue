@@ -1,15 +1,22 @@
 <template>
+  <template v-if="visible">
   <div>
- toast
+   toast
   </div>
+  </template>
 </template>
 
 <script>
   export default {
-    
+   props: {
+    visible: {
+      type: Boolean,
+      default: false
+    },
+  }    
   }
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>
