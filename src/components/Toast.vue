@@ -43,5 +43,9 @@ import { onActivated, onMounted, onUpdated } from 'vue';
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
  }
 </style>
