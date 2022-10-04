@@ -3,24 +3,22 @@
     <div>Toast</div>
     <div>弹出式提示</div>
     <div class="btn-list">
-        <Button>
+        <Button @click="toggle">
           成功提示
         </Button>
-      <Button>
-        失败提示
-      </Button>
-      <Button>
-          加载中提示
-      </Button>
-      <Button>
-        文字提示
-      </Button>
+       {{y}} 
+       <Toast/>
     </div>
   </div>
 </template>
 
 <script setup>
-  import Button from '../components/Button.vue';
+  import { ref } from 'vue';
+import Button from '../components/Button.vue';
+  import Toast from '../components/Toast.vue'
+import Toast from '../components/Toast.vue';
+  const y = ref(false);
+  const toggle = ()=>{y.value = !y.value;}
 </script>
 
 <style  scoped>
