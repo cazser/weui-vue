@@ -107,6 +107,7 @@ color: white;
   display: inline-block;
   width: 64px;
   height: 24px;
-  font-size: 2px;  
+  font-size: 2px; 
+  padding: 4px; 
 }
 </style>
