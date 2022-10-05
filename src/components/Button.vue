@@ -1,6 +1,6 @@
 <template>
 
-<button class="btn" :class="{prime:prime, warning: warning, invalid: invalid}">
+<button class="btn" :class="{prime:prime, warning: warning, invalid: invalid, small: small}">
     <div v-if="loading" class="weui-primary-loading">
       <div class="weui-primary-loading-inner"></div>
     </div>
@@ -14,7 +14,8 @@ const props = defineProps({
 warning: {type: Boolean},
 prime: {type: Boolean},
 loading: {type: Boolean},
-invalid: {type: Boolean}
+invalid: {type: Boolean},
+small: {type: Boolean}
 })
 
 
@@ -100,5 +101,12 @@ color: white;
 
 .invalid{
   border: none;
+}
+
+.small{
+  display: inline-block;
+  width: 64px;
+  height: 24px;
+  font-size: 2px;  
 }
 </style>

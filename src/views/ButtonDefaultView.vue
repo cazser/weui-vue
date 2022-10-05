@@ -21,6 +21,7 @@
       <LineButton :warning="true">
         警告行按钮
       </LineButton>
+      <Button :small="true">小按钮</Button>
     </div>
   </div>
 </template>
