@@ -18,6 +18,9 @@
       <LineButton >
         普通行按钮
       </LineButton>
+      <LineButton :warning="true">
+        警告行按钮
+      </LineButton>
     </div>
   </div>
 </template>
