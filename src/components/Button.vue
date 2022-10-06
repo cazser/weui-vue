@@ -29,7 +29,7 @@ const invalid = props.invalid;
 .btn{
   border: 1px solid transparent;
       position: relative;
-    display: block;
+    display: inline-block;
     width: 184px;
     margin-left: auto;
     margin-right: auto;
