@@ -1,24 +1,39 @@
 <template>
-  <div class="progress-wrapper">
-    <div class="progress-outer" ></div>
+  <div class="progress">
+    <div class="progress-inner" 
+    :style="{  width: (progress>100? 100 : progress)*3 + 'px' }">
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     
+  props: {
+    progress: {
+      type: Number,
+      default: false
+    },
+    
+  },
+ 
   }
 </script>
 
 <style  scoped>
- .progress-wrapper{
-  border: 1px solid;
-  width: 360px;
- }
+ .progress{
+  min-width: 300px;
+  height: 3px;
+  border-radius: 1px;
+  background: #ededed;
+}
 
- .progress-outer{
-  width: 100%;
-  background: rgba(66,66, 66, 0.1);
-  border: 1px solid;
- }
+.progress-inner{
+
+  height: 3px;
+  border-radius: 3px;
+  width:100px;
+  background: #07c160;
+  display: block;
+}
 </style>

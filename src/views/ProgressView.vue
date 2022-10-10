@@ -3,17 +3,29 @@
     <div>Progress</div>
     <div>进度条组件</div>
     <div class="btn-list">
-        <Button>
-          进度条
+      {{progress}}
+        <Button @click="add1">
+          进度条+1
         </Button>
-      <Progress />
+        <Button @click="minus1">
+          进度条-1
+        </Button>
+      <Progress :progress="progress" />
     </div>
   </div>
 </template>
 
 <script setup>
-  import Button from '../components/Button.vue';
+  import { ref } from 'vue';
+import Button from '../components/Button.vue';
 import Progress from '../components/Progress.vue';
+const progress = ref(0);
+const add1 =()=>{
+  progress.value++;
+}
+const minus1=()=>{
+  progress.value--;
+}
 </script>
 
 <style  scoped>
