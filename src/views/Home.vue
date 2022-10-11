@@ -203,10 +203,10 @@ import Overlay from '../components/Overlay.vue';
   <template #default>
     <ol class="list">
       <li>
-        <RouterLink to="/progress">
+        <RouterLink to="/audio">
           <LineItem>
             <template #header >
-              <span>Progress</span>
+              <span>Audio</span>
             </template>
             <template #default >
               <RightArrow/>

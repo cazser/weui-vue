@@ -12,6 +12,7 @@ import DialogView from './views/DialogView.vue'
 import PickerView from './views/PickerView.vue'
 import ToastView from './views/ToastView.vue';
 import ProgressView from './views/ProgressView.vue';
+import AudioView from './views/AudioView.vue'
 import { createWebHashHistory } from 'vue-router';
 
 const routes=[{ path: '/', component: Home },
@@ -23,7 +24,8 @@ const routes=[{ path: '/', component: Home },
             {path: '/dialog', component: DialogView },
             {path: '/picker', component: PickerView},
             {path: '/toast', component: ToastView},
-            {path: '/progress', component: ProgressView}];
+            {path: '/progress', component: ProgressView},
+            {path: '/audio', component: AudioView}];
 const router=createRouter(
   {
      history: createWebHashHistory(),
