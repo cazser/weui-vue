@@ -14,7 +14,7 @@ import ToastView from './views/ToastView.vue';
 import ProgressView from './views/ProgressView.vue';
 import AudioView from './views/AudioView.vue'
 import { createWebHashHistory } from 'vue-router';
-import store from './store';
+import singleton from './plugin/singletonPlugin';
 const routes=[{ path: '/', component: Home },
               {path:'/button', component: ButtonView},
             {path:'/button_default', component: ButtonDefaultView},
@@ -35,4 +35,5 @@ const router=createRouter(
 const app = createApp(App);
 app.use(router);
 //app.use(store);
+app.use(singleton, {value:2})
 app.mount('#app')
