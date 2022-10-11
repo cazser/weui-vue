@@ -79,6 +79,7 @@ export default {
   width: 100%;
   font-size: 4px;
   color: #acacac;
+ margin-top: 8px;
 }
 
 
