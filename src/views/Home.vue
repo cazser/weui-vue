@@ -95,7 +95,16 @@ import Overlay from '../components/Overlay.vue';
           </LineItem>
         </RouterLink>
       </li>
-      
+     <li>
+      <LineItem>
+        <template #header>
+          <span>Code Editer</span>
+        </template>
+        <template #default>
+           <RightArrow />
+        </template>
+      </LineItem>
+     </li> 
       
        
     </ol>
