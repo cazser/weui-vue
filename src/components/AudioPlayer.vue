@@ -28,7 +28,7 @@ export default {
         }
     },
     setup(props, context){
-      
+
     }
 };
 </script>
