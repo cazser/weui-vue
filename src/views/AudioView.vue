@@ -7,7 +7,7 @@
       <AudioPlayer>
         <span>《托妻献子》郭德纲、于谦</span>
       </AudioPlayer>  
-      
+      <button @click="play">play</button>
     </div>
   </div>
 
@@ -15,7 +15,15 @@
 
 <script setup>
   import Button from '../components/Button.vue';
-  import AudioPlayer from '../components/AudioPlayer.vue'
+  import AudioPlayer from '../components/AudioPlayer.vue';
+  import {inject} from 'vue';
+  const audio = inject('audio');
+
+  audio.src='http://127.0.0.1:8080/buru.mp3';
+  console.log(audio);
+ const play=()=>{
+   audio.play();
+ }
 </script>
 
 <style  scoped>
