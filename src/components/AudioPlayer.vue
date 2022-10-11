@@ -12,7 +12,7 @@
         </div>
         
       </div>
-        <div class="ball">
+        <div class="ball" @click="onPlayBall">
            <img src="../images/audio.svg"/>
         </div>
       </div>
@@ -25,10 +25,18 @@ export default {
     props: {
         url: {
             type: String,
+        },
+        audio:{
+          type: Object
         }
     },
     setup(props, context){
-
+        const onPlayBall=()=>{
+          console.log(1);
+          //console.log(props.audio);
+          props.audio.play();
+        }
+        return {onPlayBall}
     }
 };
 </script>
