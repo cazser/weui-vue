@@ -5,9 +5,11 @@
     <div class="btn-list">
       <AudioPlayer>
         <span>《托妻献子》郭德纲、于谦</span>
-      </AudioPlayer>
+      </AudioPlayer>  
+      
     </div>
   </div>
+
 </template>
 
 <script setup>

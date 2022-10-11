@@ -222,7 +222,7 @@ import Overlay from '../components/Overlay.vue';
    </FoldPanel>
    </li>
   </ul>
-
+  <button @click=" this.$store.commit('increment')">+1</button>
 
   </div>
 </template>
