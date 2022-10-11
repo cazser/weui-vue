@@ -27,6 +27,9 @@ export default {
             type: String,
         }
     },
+    setup(props, context){
+      
+    }
 };
 </script>
 
