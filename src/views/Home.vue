@@ -14,7 +14,8 @@ import Overlay from '../components/Overlay.vue';
   <div class="wrapper">
     <div class="titleWrapper">
       <h1>WeUI</h1>
-      <p>WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。</p>
+      <p>WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。
+      </p>
     </div>
    
     <ul class="fold-list">
@@ -214,7 +215,7 @@ import Overlay from '../components/Overlay.vue';
           </LineItem>
         </RouterLink>
       </li>
-      
+          
       
        
     </ol>

@@ -35,5 +35,5 @@ const router=createRouter(
 const app = createApp(App);
 app.use(router);
 //app.use(store);
-app.use(singleton, {value:2})
+app.use(singleton, {name:"something", value:2})
 app.mount('#app')
