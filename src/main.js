@@ -12,7 +12,8 @@ import DialogView from './views/DialogView.vue'
 import PickerView from './views/PickerView.vue'
 import ToastView from './views/ToastView.vue';
 import ProgressView from './views/ProgressView.vue';
-import AudioView from './views/AudioView.vue'
+import AudioView from './views/AudioView.vue';
+import CalenderView from './views/CalenderView.vue'
 import { createWebHashHistory } from 'vue-router';
 import singleton from './plugin/singletonPlugin';
 const routes=[{ path: '/', component: Home },
@@ -25,7 +26,8 @@ const routes=[{ path: '/', component: Home },
             {path: '/picker', component: PickerView},
             {path: '/toast', component: ToastView},
             {path: '/progress', component: ProgressView},
-            {path: '/audio', component: AudioView}];
+            {path: '/audio', component: AudioView},
+            {path: '/calendar', component: CalenderView}];
 const router=createRouter(
   {
      history: createWebHashHistory(),
