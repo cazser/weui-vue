@@ -1,48 +1,74 @@
-<script setup>
-import { reactive, ref, watch } from "vue";
+<script >
+
+import { inject, reactive, ref, watch } from "vue";
 
 import Overlay from "./Overlay.vue";
 import Button from "./Button.vue";
 
-
-const year = ref(new Date().getFullYear());
-const month = ref(new Date().getMonth()+1);
-const onClick = ()=>{
-  
-  visible.value = !visible.value;
-}
-const visible = ref(false);
-const onClose=()=>{
-  visible.value = false;
-}
-const months = reactive([1,2,3,4,5,6,7,8,9,10,11,12]);
-const years = reactive([year.value]);
-for(let i=0;i<10; i++){
-  years.unshift(year.value - i -1);
-  years.push(year.value+i+1);
-}
-const selectedMonth = ref(0);
-const onSubmit = ()=>{
-  year.value = selectedYear.value;
-  month.value = selectedMonth.value;
-   onClose();
-}
-const onSelectMonth = (month_)=>{
-   selectedMonth.value = Number.parseInt( month_ );
-}
-watch(year, ()=>{
-  while(years.length>0){
-    years.pop();
+export default {
+  components:{Overlay, Button},
+  props: {
+        year: { type: Number },
+        month: {type: Number}
+        
+    },
+  setup(props, context) {
+      const year = inject("year");
+      const month = inject("month");
+      console.log(typeof year.value);
+      const onClick = ()=>{
+          visible.value = !visible.value;
+      }
+    const visible = ref(false);
+    const onClose=()=>{
+      visible.value = false;
+    }
+    const months = reactive([1,2,3,4,5,6,7,8,9,10,11,12]);
+    const years = reactive([year.value]);
+      for(let i=0;i<10; i++){
+        years.unshift(year.value - i -1);
+        years.push(year.value +i+1);
+    }
+    const selectedMonth = ref(0);
+    const onSubmit = ()=>{
+      year.value = selectedYear.value;
+      month.value = selectedMonth.value;
+      onClose();
+    }
+    const onSelectMonth = (month_)=>{
+      selectedMonth.value = Number.parseInt( month_ );
+    }
+    watch(year, ()=>{
+      while(years.length>0){
+      years.pop();
+    }
+    
+    years.push(year.value);
+      for(let i=0;i<10; i++){
+      years.unshift(year.value - i -1);
+      years.push(year.value+i+1);
+    }
+    })
+    
+    const selectedYear = ref(0);
+    const onSelectYear = (year_)=>{
+      selectedYear.value = Number.parseInt(year_);
+    }
+    return{
+      year,
+      month,
+      onClick,
+      visible,
+      onClose,
+      months,
+      years,
+      selectedMonth,
+      onSubmit,
+      onSelectMonth,
+      selectedYear,
+      onSelectYear
+    }
   }
-  years.push(year.value);
-  for(let i=0;i<10; i++){
-  years.unshift(year.value - i -1);
-  years.push(year.value+i+1);
-}
-})
-const selectedYear = ref(0);
-const onSelectYear = (year_)=>{
-  selectedYear.value = Number.parseInt(year_);
 }
 </script>
 
