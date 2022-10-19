@@ -3,20 +3,21 @@
     <div>Calendar</div>
     <div>日历</div>
     <div class="btn-list">
-      
+      <Calendar />
     </div>
   </div>
 </template>
 
 <script setup>
   import Button from '../components/Button.vue';
+import Calendar from '../components/Calendar.vue';
 </script>
 
 <style  scoped>
 .button-view-wrapper{
   padding: 36px;
   min-height: 100vh;
-  background-color: #ededed;
+  background-color: white;
 }
 
 .btn-item{
