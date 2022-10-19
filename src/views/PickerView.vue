@@ -17,14 +17,16 @@
                        title="单列选择器" 
                        :options="options" 
                        v-model:reference="reference" />
+    <DatePicker/>
   </div>
+
 </template>
 
 <script setup>
   import { ref } from 'vue';
   import Button from '../components/Button.vue';
   import SingleLevelPicker from '../components/SingleLevelPicker.vue';
-
+  import DatePicker from '../components/DatePicker.vue';
   const y = ref(false);
   const options = ["飞机票", "火车票", "出租车", "公交票", "其他", ];
   const toggle = ()=> y.value = !y.value;
