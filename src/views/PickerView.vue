@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { provide, ref } from 'vue';
   import Button from '../components/Button.vue';
   import SingleLevelPicker from '../components/SingleLevelPicker.vue';
   import DatePicker from '../components/DatePicker.vue';
@@ -31,6 +31,10 @@
   const options = ["飞机票", "火车票", "出租车", "公交票", "其他", ];
   const toggle = ()=> y.value = !y.value;
   const reference = ref("1");
+  const year = ref(2022);
+  const month = ref(1);  
+  provide("year",year);
+  provide( "month" ,month);
 </script>
 
 <style  scoped>
