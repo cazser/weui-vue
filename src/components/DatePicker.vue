@@ -15,7 +15,6 @@ export default {
   setup(props, context) {
       const year = inject("year");
       const month = inject("month");
-      console.log(typeof year.value);
       const onClick = ()=>{
           visible.value = !visible.value;
       }
@@ -29,7 +28,7 @@ export default {
         years.unshift(year.value - i -1);
         years.push(year.value +i+1);
     }
-    const selectedMonth = ref(0);
+    const selectedMonth = ref(1);
     const onSubmit = ()=>{
       year.value = selectedYear.value;
       month.value = selectedMonth.value;
@@ -76,6 +75,7 @@ export default {
 <template>
   <div @click="onClick">
     {{year}}年{{month}}月
+    <svg t="1666225002713" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2602" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M957.056 338.624C951.84 327.296 940.512 320 928 320L96 320c-12.512 0-23.84 7.296-29.088 18.624-5.216 11.36-3.328 24.704 4.768 34.208l416 485.344c6.08 7.104 14.944 11.2 24.288 11.2s18.208-4.096 24.288-11.2l416-485.344C960.448 363.328 962.272 349.984 957.056 338.624z" p-id="2603"></path></svg>
   </div>
   <Overlay v-if="visible">
   <div  class="pickDate">
@@ -165,5 +165,8 @@ ul>li{
   margin-top: 12px;
  }
 
-
+ svg{
+  margin-left: -90px;
+  max-height: 1em;
+ }
 </style>
