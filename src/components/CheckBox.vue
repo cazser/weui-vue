@@ -1,46 +1,38 @@
 <template>
   <div class="checkWrapper">
-   
-    <span @click="click" class="uncheck" :class="{checked: checked}" >
-      
-    <img class="icon" v-if="checked" src="../images/yes.svg"/>
-    
+    <span @click="click" class="uncheck" :class="{ checked: checked }">
+      <img class="icon" v-if="checked" src="../images/yes.svg" />
     </span>
-  
-   <slot></slot>
-  </div> 
 
+    <slot></slot>
+  </div>
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from 'vue';
+import { onMounted, ref, watch } from "vue";
 
-  const props = defineProps({
-    checked: Boolean
-  });
-  const emits = defineEmits(
-    ['update:checked']
-  )
-  
-  let checked =ref( props.checked);
- 
-const click=()=>{
+const props = defineProps({
+  checked: Boolean,
+});
+const emits = defineEmits(["update:checked"]);
+
+let checked = ref(props.checked);
+
+const click = () => {
   checked.value = !checked.value;
-  
+
   emits("update:checked", checked.value);
-  
-}
+};
 </script>
 
 <style scoped>
-
-.checkWrapper{
+.checkWrapper {
   padding: 12px;
   line-height: 1.5em;
 }
-.uncheck{
+.uncheck {
   display: inline;
-  width:1em;
+  width: 1em;
   border-radius: 50%;
   height: 1em;
   border: 1px solid;
@@ -50,10 +42,8 @@ const click=()=>{
   margin: 2px;
 }
 
-.icon{
+.icon {
   transform: translateX(-2px);
   min-width: 1.2em;
 }
-
-
 </style>
