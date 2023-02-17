@@ -1,6 +1,8 @@
 <template>
-  <div class="wrapper">
-    {{ props.content }}
+  <div class="wrapper" :class="{active: props.content}">
+    <i>
+    {{ props.content ? "✓" :" " }}
+    </i>
   </div>
 </template>
 
@@ -12,6 +14,15 @@ const props = defineProps({content:Boolean})
 <style scoped>
     .wrapper{
       border: 1px solid black;
-      max-height: 100px;
+      height: 15px;
+      width: 15px;
     }
+
+    .active >i{
+       position: relative;
+       bottom: 7px;
+       font-size: 21px;
+    } 
+    
+    
 </style>

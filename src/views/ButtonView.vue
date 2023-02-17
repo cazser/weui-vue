@@ -4,7 +4,7 @@
        <li v-for="(list, index) in listGroup"
           :key="index"> 
           <div>
-            {{ list.reduce((a,b)=>a&&b, true) }}
+            <test  :content="list.reduce((a,b)=>a&&b, true)"/>
           </div>
           <ol>
             <li v-for="(item, index1) in list"
@@ -38,7 +38,8 @@
   import { reactive, ref } from 'vue';
 import Button from '../components/Button.vue';
   import Test from '../components/Test.vue'
-   const listGroup = reactive([[true, true, true]]);
+   const listGroup = 
+   reactive([[true, true, true], [true, true, true], [true, true, true]]);
    const onClick = ()=>{
     listGroup[0][1]= ! listGroup[0][1];
    }
