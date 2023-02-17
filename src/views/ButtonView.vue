@@ -3,10 +3,13 @@
     <ol>
        <li v-for="(list, index) in listGroup"
           :key="index"> 
+          <div>
+            {{ list.reduce((a,b)=>a&&b, true) }}
+          </div>
           <ol>
             <li v-for="(item, index1) in list"
             :key="index1">
-            <test :content="item" ></test>
+            <test :content="item"  @click="click1(index, index1)"></test>
             
             </li>
           </ol>
@@ -38,6 +41,10 @@ import Button from '../components/Button.vue';
    const listGroup = reactive([[true, true, true]]);
    const onClick = ()=>{
     listGroup[0][1]= ! listGroup[0][1];
+   }
+
+   const click1 = (a, b)=>{
+    listGroup[a][b] = !listGroup[a][b];
    }
 </script>
 
