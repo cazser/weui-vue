@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
-    <slot></slot>
+    {{ props.content }}
   </div>
 </template>
 
 <script setup>
+const props = defineProps({content:Boolean}) 
   
 </script>
 

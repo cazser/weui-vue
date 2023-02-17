@@ -1,10 +1,26 @@
 <template>
   <div class="button-view-wrapper">
+    <ol>
+       <li v-for="(list, index) in listGroup"
+          :key="index"> 
+          <ol>
+            <li v-for="(item, index1) in list"
+            :key="index1">
+            <test :content="item" ></test>
+            
+            </li>
+          </ol>
+          </li>
+      
+    </ol>
     <div>Button</div>
     <div>按钮</div>
+    <Button @click="onClick">
+          普通型
+        </Button>
     <div class="btn-list">
       <router-link to="/button_default" class="btn-item">
-        <Button>
+        <Button @click="onClick">
           普通型
         </Button>
       </router-link>
@@ -16,7 +32,13 @@
 </template>
 
 <script setup>
-  import Button from '../components/Button.vue';
+  import { reactive, ref } from 'vue';
+import Button from '../components/Button.vue';
+  import Test from '../components/Test.vue'
+   const listGroup = reactive([[true, true, true]]);
+   const onClick = ()=>{
+    listGroup[0][1]= ! listGroup[0][1];
+   }
 </script>
 
 <style  scoped>
